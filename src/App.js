@@ -1,24 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Star from "./Star";
+import Rating from "./Rating";
+
+import "./App.css";
+
+import NewRating from "./NewRating";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>Star Components:</h2>
+      <Star color="pink" isFilled />
+      <Star color="magenta" />
+      <Star color="indigo" isFilled />
+      <h2>Rating Component (uses Stars):</h2>
+      <Rating stars={4} />
+      <NewRating stars={4} />
     </div>
   );
 }
